@@ -6,10 +6,13 @@
     "last_updated": "2026-01-04",
     "notes": "Narrative inputs are intentionally kept informal and free-form. Calendar constraints are handled in calendar.json."
   },
-
   "user_profile": {
     "working_hours_per_week": 45,
-    "preferred_deepwork_time": ["10:30-12:30", "14:00-17:30", "21:00-22:30"],
+    "preferred_deepwork_time": [
+      "10:30-12:30",
+      "14:00-17:30",
+      "21:00-22:30"
+    ],
     "energy_pattern": {
       "morning": "medium",
       "afternoon": "high",
@@ -22,7 +25,6 @@
     },
     "notes": "Post-holiday restart period; avoid cognitive overload and decision fatigue."
   },
-
   "projects": [
     {
       "id": "paper_becky_main",
@@ -41,7 +43,7 @@
         },
         "difficulties": {
           "style": "free_form_slash",
-          "content": "这类型的文章我没写过/而且需要与多个部门联动/导致进度经常被耽搁/我需要持续push/必要的时候约和同事们面谈/文章内容多且繁杂/需要反复打磨。"
+          "content": "这类型的文章我没写过/而且需要与多个部门联动/导致进度经常被耽搁/我需要持续push/必要的时候约和同事们面谈/文章内容多且繁杂/需要反复打磨"
         }
       },
       "user_confirmed": {
@@ -52,12 +54,15 @@
       "status": "active",
       "status_reason": "waiting_for_discussion",
       "dependency_hints": {
-        "requires_discussion_with": ["Jo"],
-        "likely_triggers": ["meeting_request"]
+        "requires_discussion_with": [
+          "Jo"
+        ],
+        "likely_triggers": [
+          "meeting_request"
+        ]
       },
-      "notes": "High personal importance; coordination-heavy."
+      "notes": "这里我想试试修改是否会成功"
     },
-
     {
       "id": "paper_dental_moco",
       "narrative_input": {
@@ -90,7 +95,6 @@
       },
       "notes": "Technically heavy; avoid over-expansion in one week."
     },
-
     {
       "id": "dental_MRI_funding",
       "narrative_input": {
@@ -118,12 +122,15 @@
       "status": "active",
       "status_reason": "waiting_for_discussion",
       "dependency_hints": {
-        "requires_discussion_with": ["Jo"],
-        "likely_triggers": ["meeting_request"]
+        "requires_discussion_with": [
+          "Jo"
+        ],
+        "likely_triggers": [
+          "meeting_request"
+        ]
       },
       "notes": "Strategically important and emotionally sensitive."
     },
-
     {
       "id": "paper_TwinsUK_moco",
       "narrative_input": {
@@ -151,12 +158,18 @@
       "status": "active",
       "status_reason": "blocked",
       "dependency_hints": {
-        "requires_discussion_with": ["Claire", "Liane", "Jo"],
-        "likely_triggers": ["email", "meeting_request"]
+        "requires_discussion_with": [
+          "Claire",
+          "Liane",
+          "Jo"
+        ],
+        "likely_triggers": [
+          "email",
+          "meeting_request"
+        ]
       },
       "notes": "Blocked mainly due to missing multi-person alignment."
     },
-
     {
       "id": "paper_neonate_moco",
       "narrative_input": {
@@ -187,7 +200,6 @@
       },
       "notes": "Exploratory trade-off between speed and marginal improvement."
     },
-
     {
       "id": "idea_denosing_reconstruction",
       "narrative_input": {
@@ -215,95 +227,82 @@
       "status_reason": "exploratory",
       "notes": "High uncertainty; should be protected as low-pressure exploration."
     },
-
     {
       "id": "student_project_dental",
-      "narrative_input": {
-        "project_description": {
-          "style": "free_form_slash",
-          "content": "我在辅导一个硕士的学生项目/有关dental MRI phantom making/这个项目今年3月结束"
-        },
-        "current_status_and_next_steps": {
-          "style": "free_form_slash",
-          "content": "目前我们正在3D打印phantom的components/打印之后需要组建phantom/并且做一些初步的MRI scan"
-        },
-        "other_comments": {
-          "style": "free_form_slash",
-          "content": "我希望能不让这个项目耽误我太多时间/我不太能从中得到显性的利益/但是我也不想坑这个学生"
-        },
-        "difficulties": {
-          "style": "free_form_slash",
-          "content": "学生每周负责项目的时间有限/我目前承担了太多项目内容-比如3D打印和项目经费报销都是我在搞/我不满意这种情况"
-        }
-      },
-      "user_confirmed": {
-        "category": "education",
-        "deadline": "2026-03-15"
-      },
+      "category": "education",
       "status": "active",
-      "status_reason": "time_draining",
-      "notes": "Needs scope control and minimum-maintenance mode."
+      "raw_input": {
+        "narrative_input": {
+          "project_description": {
+            "style": "free_form_slash",
+            "content": "我在辅导一个硕士的学生项目/有关dental MRI phantom making/这个项目今年3月结束"
+          },
+          "current_status_and_next_steps": {
+            "style": "free_form_slash",
+            "content": "目前我们正在3D打印phantom的components/打印之后需要组建phantom/并且做一些初步的MRI scan"
+          },
+          "other_comments": {
+            "style": "free_form_slash",
+            "content": "我希望能不让这个项目耽误我太多时间/我不太能从中得到显性的利益/但是我也不想坑这个学生"
+          },
+          "difficulties": {
+            "style": "free_form_slash",
+            "content": "学生每周负责项目的时间有限/我目前承担了太多项目内容-比如3D打印和项目经费报销都是我在搞/我不满意这种情况"
+          }
+        }
+      }
     },
-
     {
       "id": "job_hunting",
-      "narrative_input": {
-        "project_description": {
-          "style": "free_form_slash",
-          "content": "我目前在找工作/当前合同只到2026-09-10/包括合同结束后我的英国签证也会到期/我想如果能找到理想的回国工作就回国/但我也考虑在英国再留一年给自己缓冲"
-        },
-        "current_status_and_next_steps": {
-          "style": "free_form_slash",
-          "content": "目前已有北京友谊医院院士实验室offer/联影offer/复旦要求依托平台申请成功海优才能入职/上交是1-8日线上面试/上科大是1月中旬面试/我需要多接触更多平台/也需要和多方交流沟通"
-        },
-        "other_comments": {
-          "style": "free_form_slash",
-          "content": "我希望能多沟通多比较"
-        },
-        "difficulties": {
-          "style": "free_form_slash",
-          "content": "我社交有困难/总是拖延/目前拿到的offer都不满意/我还感觉需要多和人聊才能了解更加清楚状况"
-        }
-      },
-      "user_confirmed": {
-        "category": "job_hunting",
-        "deadline_policy": "asap"
-      },
+      "category": "job_hunting",
       "status": "active",
-      "status_reason": "decision_heavy",
-      "dependency_hints": {
-        "likely_triggers": ["email", "informational_chat"]
-      },
-      "notes": "High cognitive and emotional load."
+      "raw_input": {
+        "narrative_input": {
+          "project_description": {
+            "style": "free_form_slash",
+            "content": "我目前在找工作/当前合同只到2026-09-10/包括合同结束后我的英国签证也会到期/我想如果能找到理想的回国工作就回国/但我也考虑在英国再留一年给自己缓冲"
+          },
+          "current_status_and_next_steps": {
+            "style": "free_form_slash",
+            "content": "目前已有北京友谊医院院士实验室offer/联影offer/复旦要求依托平台申请成功海优才能入职/上交是1-8日线上面试/上科大是1月中旬面试/我需要多接触更多平台/也需要和多方交流沟通"
+          },
+          "other_comments": {
+            "style": "free_form_slash",
+            "content": "我希望能多沟通多比较"
+          },
+          "difficulties": {
+            "style": "free_form_slash",
+            "content": "我社交有困难/总是拖延/目前拿到的offer都不满意/我还感觉需要多和人聊才能了解更加清楚状况"
+          }
+        }
+      }
     },
-
     {
       "id": "engagement",
-      "narrative_input": {
-        "project_description": {
-          "style": "free_form_slash",
-          "content": "2026-1-31 到2026-2-23我请年假回国订婚/订婚时间是2-2到2-7日"
-        },
-        "current_status_and_next_steps": {
-          "style": "free_form_slash",
-          "content": "目前订婚布置方案正在推进中/我的父母能帮我执行/但是他们不太能帮太多决定层面的忙/我还是需要花精力在这个上面"
-        },
-        "other_comments": {
-          "style": "free_form_slash",
-          "content": "希望能搞好布置/也协调好多方宾客"
-        },
-        "difficulties": {
-          "style": "free_form_slash",
-          "content": "我有点觉得这个事情很麻烦/有点躲避/也讨厌和多方沟通/但是如果到时候结果不好/我会非常失望"
-        }
-      },
-      "user_confirmed": {
-        "category": "life",
-        "deadline": "2026-02-02"
-      },
+      "name": "Engagement preparation",
+      "category": "life",
       "status": "active",
-      "status_reason": "emotionally_heavy",
-      "notes": "Time-bounded but emotionally sensitive."
+      "ai_summary": {
+        "current_state": "订婚筹备正在推进，部分事务由父母执行，但仍需本人参与关键决策。",
+        "what_is_done": [],
+        "what_is_pending": [],
+        "main_blockers": []
+      },
+      "progress_markers": {},
+      "required_triggers": [],
+      "unblocking_suggestions": [],
+      "work_mode_tags": {
+        "primary_mode": "personal",
+        "requires_meeting": true
+      },
+      "deadline_plan": {
+        "deadline": "2026-02-02",
+        "phases": ["alignment", "execution"],
+        "current_phase": "execution",
+        "phase_rationale": "时间已临近，筹备正在进行中。"
+      },
+      "notes": "Emotionally heavy; should limit concurrent decision-heavy work."
     }
+
   ]
 }

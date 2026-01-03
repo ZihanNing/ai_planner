@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Planner – Weekly Review</title>
+</head>
+<body>
+
+<h2>Weekly Review</h2>
+
+<label for="capacity">Capacity:</label>
+<select id="capacity">
+  <option value="low">low</option>
+  <option value="medium" selected>medium</option>
+  <option value="high">high</option>
+</select>
+
+<br><br>
+
+<button onclick="runReview()">Run weekly review</button>
+
+<h3>Result</h3>
+<pre id="result">Waiting...</pre>
+
+<script>
+async function runReview() {
+  const capacity = document.getElementById("capacity").value;
+
+  const response = await fetch("http://127.0.0.1:8000/weekly-review", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      capacity: capacity
+    })
+  });
+
+  const data = await response.json();
+  document.getElementById("result").textContent =
+    JSON.stringify(data, null, 2);
+}
+</script>
+
+</body>
+</html>

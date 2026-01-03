@@ -1,14 +1,173 @@
 {
-  "todos": [
-    {
-      "project_id": "paper_becky_main",
-      "task": "Prepare structure summary",
-      "checked": true
+  "week": "2026-01-05_to_2026-01-11",
+  "timezone": "Europe/London",
+  "days": {
+    "2026-01-05": {
+      "mode": "onsite",
+      "timeline": [
+        {
+          "type": "task",
+          "time_hint": "before 12:00",
+          "project_id": "paper_becky_main",
+          "description": "Prepare 1-page structure summary for Jo (highlight uncertainties)",
+          "requires_server": false,
+          "energy_level": "medium",
+          "status": "pending"
+        },
+        {
+          "type": "meeting",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Neonatal UHF meeting"
+        },
+        {
+          "type": "task",
+          "time_hint": "13:00-14:00",
+          "project_id": "dental_MRI_funding",
+          "description": "List 2–3 key questions for funding discussion with Jo",
+          "requires_server": false,
+          "energy_level": "low",
+          "status": "pending"
+        },
+        {
+          "type": "meeting",
+          "start": "14:00",
+          "end": "15:00",
+          "title": "Catch-up with Jo"
+        },
+        {
+          "type": "task",
+          "time_hint": "after 15:00",
+          "project_id": "paper_becky_main",
+          "description": "Digest meeting outcomes and send brief action summary",
+          "requires_server": false,
+          "energy_level": "medium",
+          "status": "pending"
+        }
+      ]
     },
-    {
-      "project_id": "paper_dental_moco",
-      "task": "Background masking",
-      "checked": false
+    "2026-01-06": {
+      "mode": "remote",
+      "timeline": [
+        {
+          "type": "task",
+          "time_hint": "before 12:00",
+          "project_id": "paper_becky_main",
+          "description": "Update manuscript structure based on Jo discussion",
+          "requires_server": false,
+          "energy_level": "medium",
+          "status": "pending"
+        },
+        {
+          "type": "meeting",
+          "start": "12:00",
+          "end": "13:00",
+          "title": "CBD seminar"
+        },
+        {
+          "type": "task",
+          "time_hint": "after 13:00",
+          "project_id": "paper_dental_moco",
+          "description": "[Coding Task – Weekly Minimum] Minimal auto background masking prototype",
+          "requires_server": false,
+          "energy_level": "high",
+          "status": "pending"
+        }
+      ]
+    },
+    "2026-01-07": {
+      "mode": "onsite",
+      "timeline": [
+        {
+          "type": "meeting",
+          "start": "10:00",
+          "end": "12:00",
+          "title": "Weekly Physics Meeting"
+        },
+        {
+          "type": "task",
+          "time_hint": "after 12:00",
+          "project_id": "paper_becky_main",
+          "description": "Outline results/discussion bullet points (no drafting)",
+          "requires_server": false,
+          "energy_level": "medium",
+          "status": "pending"
+        }
+      ]
+    },
+    "2026-01-08": {
+      "mode": "remote",
+      "timeline": [
+        {
+          "type": "task",
+          "time_hint": "morning",
+          "project_id": "dental_MRI_funding",
+          "description": "Light revision of initial funding text (alignment only)",
+          "requires_server": false,
+          "energy_level": "medium",
+          "status": "pending"
+        },
+        {
+          "type": "task",
+          "time_hint": "afternoon",
+          "project_id": "paper_TwinsUK_moco",
+          "description": "Send short email to arrange 1:1 discussion (unblocking)",
+          "requires_server": false,
+          "energy_level": "low",
+          "status": "pending"
+        }
+      ]
+    },
+    "2026-01-09": {
+      "mode": "onsite",
+      "timeline": [
+        {
+          "type": "task",
+          "time_hint": "morning",
+          "project_id": "paper_dental_moco",
+          "description": "Check server availability and run small-scale test if possible",
+          "requires_server": true,
+          "energy_level": "medium",
+          "status": "pending"
+        },
+        {
+          "type": "task",
+          "time_hint": "afternoon",
+          "project_id": "paper_dental_moco",
+          "description": "Draft Methods outline",
+          "requires_server": false,
+          "energy_level": "medium",
+          "status": "pending"
+        }
+      ]
+    },
+    "2026-01-10": {
+      "mode": "remote",
+      "timeline": [
+        {
+          "type": "task",
+          "time_hint": "30–60 min",
+          "project_id": "idea_denosing_reconstruction",
+          "description": "Exploration: sketch minimal network validation path",
+          "requires_server": false,
+          "energy_level": "low",
+          "status": "pending"
+        }
+      ]
+    },
+    "2026-01-11": {
+      "mode": "remote",
+      "timeline": [
+        {
+          "type": "task",
+          "time_hint": "light",
+          "project_id": "personal_review",
+          "description": "Weekly review and light planning",
+          "requires_server": false,
+          "energy_level": "low",
+          "status": "pending"
+        }
+      ]
     }
-  ]
+  }
 }

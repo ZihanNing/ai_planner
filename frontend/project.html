@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Planner – Projects</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      margin: 30px;
+    }
+    .project {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+    }
+    textarea {
+      width: 100%;
+      min-height: 80px;
+      font-family: monospace;
+    }
+    select {
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 10px;
+      margin-right: 5px;
+    }
+    .danger {
+      color: white;
+      background: #c0392b;
+    }
+    .readonly {
+      background: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Projects</h1>
+
+<button onclick="analyzeProjects()">Analyze projects</button>
+
+<script>
+function analyzeProjects() {
+  alert("Analyze projects (stub). API will be connected later.");
+}
+</script>
+
+<div id="projects"></div>
+
+<script>
+const API_BASE = "http://127.0.0.1:8000";
+const STATUS_OPTIONS = ["active", "finished", "blocked", "paused", "hanged"];
+const drafts = {};
+
+async function loadProjects() {
+  const res = await fetch(`${API_BASE}/projects`);
+  const projects = await res.json();
+
+  const container = document.getElementById("projects");
+  container.innerHTML = "";
+
+  projects.forEach(p => {
+    drafts[p.id] = JSON.parse(JSON.stringify(p));
+
+    const div = document.createElement("div");
+    div.className = "project";
+
+    div.innerHTML = `
+      <h3>${p.id}</h3>
+
+      <label><strong>Status</strong></label><br>
+      <select onchange="updateDraft('${p.id}', 'status', this.value)">
+        ${STATUS_OPTIONS.map(s =>
+          `<option value="${s}" ${p.status === s ? "selected" : ""}>${s}</option>`
+        ).join("")}
+      </select>
+
+      <br><br>
+
+      <label><strong>Narrative input</strong></label>
+      <textarea onchange="updateJSON('${p.id}', 'narrative_input', this.value)">
+${JSON.stringify(p.narrative_input || {}, null, 2)}
+      </textarea>
+
+      <label><strong>User confirmed</strong></label>
+      <textarea onchange="updateJSON('${p.id}', 'user_confirmed', this.value)">
+${JSON.stringify(p.user_confirmed || {}, null, 2)}
+      </textarea>
+
+      <label><strong>Notes</strong></label>
+      <textarea onchange="updateDraft('${p.id}', 'notes', this.value)">
+${p.notes || ""}
+      </textarea>
+
+      <label><strong>Dependency hints (AI)</strong></label>
+      <textarea class="readonly" readonly>
+${JSON.stringify(p.dependency_hints || {}, null, 2)}
+      </textarea>
+
+      <br>
+      <button onclick="saveProject('${p.id}')">Save changes</button>
+      <button class="danger" onclick="deleteProject('${p.id}')">Delete project</button>
+    `;
+
+    container.appendChild(div);
+  });
+}
+
+function updateDraft(id, field, value) {
+  drafts[id][field] = value;
+}
+
+function updateJSON(id, field, value) {
+  try {
+    drafts[id][field] = JSON.parse(value);
+  } catch {
+    alert(`Invalid JSON in ${field}`);
+  }
+}
+
+async function saveProject(id) {
+  const { status, narrative_input, user_confirmed, notes } = drafts[id];
+
+  const payload = { status, narrative_input, user_confirmed, notes };
+
+  const res = await fetch(`${API_BASE}/projects/${id}`, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload)
+  });
+
+  if (!res.ok) {
+    alert("Failed to save project");
+    return;
+  }
+
+  alert("Saved");
+  loadProjects();
+}
+
+async function deleteProject(id) {
+  if (!confirm(`Are you sure you want to delete project "${id}"?`)) return;
+
+  const res = await fetch(`${API_BASE}/projects/${id}`, {
+    method: "DELETE"
+  });
+
+  if (!res.ok) {
+    alert("Failed to delete project");
+    return;
+  }
+
+  loadProjects();
+}
+
+loadProjects();
+</script>
+
+</body>
+</html>

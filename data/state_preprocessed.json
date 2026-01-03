@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "status_ai_processed_v0.3",
+    "version": "status_ai_processed_v0.4",
     "source": "state.json",
     "timezone": "Europe/London",
     "generated_date": "2026-01-04"
@@ -8,23 +8,22 @@
   "projects": [
     {
       "id": "paper_becky_main",
-      "name": "Becky main manuscript",
       "category": "research",
       "status": "waiting_for_discussion",
       "ai_summary": {
-        "current_state": "文章整体架构已经完成，但方向与结构仍需与 Jo 对齐确认。后续 results、discussion 及多方数据协调均依赖此次讨论。",
+        "current_state": "文章整体架构已完成，但核心方向与结构仍需与 Jo 对齐确认，后续内容强依赖该讨论。",
         "what_is_done": [
-          "完成文章大致结构"
+          "完成文章整体结构初稿"
         ],
         "what_is_pending": [
-          "与 Jo 确认文章整体方向和结构",
-          "起草 results 和 discussion",
-          "联系相关同事获取数据"
+          "与 Jo 确认文章方向与结构",
+          "起草 results 与 discussion",
+          "协调多方数据支持"
         ],
         "main_blockers": [
           {
             "type": "coordination",
-            "description": "文章方向和结构需与 Jo 对齐后才能推进",
+            "description": "文章方向与结构需导师确认",
             "dependency": "Jo"
           }
         ]
@@ -34,8 +33,7 @@
           "完成文章结构初稿"
         ],
         "pending_next": [
-          "方向与结构确认",
-          "启动数据协调"
+          "方向与结构确认"
         ]
       },
       "required_triggers": [
@@ -58,26 +56,14 @@
         "requires_server": false,
         "requires_meeting": true
       },
-      "deadline_plan": {
-        "deadline": null,
-        "phases": [
-          "alignment",
-          "content_draft",
-          "iteration",
-          "submission"
-        ],
-        "current_phase": "alignment",
-        "phase_rationale": "文章结构与方向尚未与导师确认，后续内容强依赖此次对齐。"
-      },
-      "notes": "高个人重要性，强依赖跨人员协调。"
+      "notes": "个人重要性高，强依赖跨人员协调。"
     },
     {
       "id": "paper_dental_moco",
-      "name": "Dental MRI motion correction manuscript",
       "category": "research",
       "status": "active",
       "ai_summary": {
-        "current_state": "数据已整理完成，可独立推进技术实现与文章撰写。",
+        "current_state": "数据已整理完成，方向明确，可独立推进技术实现与文章撰写。",
         "what_is_done": [
           "完成数据采集与整理",
           "已有文章框架"
@@ -105,25 +91,14 @@
         "requires_server": true,
         "requires_meeting": false
       },
-      "deadline_plan": {
-        "deadline": null,
-        "phases": [
-          "content_draft",
-          "iteration",
-          "submission"
-        ],
-        "current_phase": "content_draft",
-        "phase_rationale": "方向明确，正在补全核心技术与文章内容。"
-      },
-      "notes": "技术负荷较高，部分模块存在实现不确定性。"
+      "notes": "技术负荷较高，避免单周过度扩展。"
     },
     {
       "id": "dental_MRI_funding",
-      "name": "Dental MRI funding application",
       "category": "research",
       "status": "waiting_for_discussion",
       "ai_summary": {
-        "current_state": "初始申请内容已完成草稿，但需与 Jo 确认后修改。",
+        "current_state": "初始申请草稿已完成，但需与 Jo 对齐后才能修改与提交。",
         "what_is_done": [
           "完成初始申请草稿"
         ],
@@ -167,26 +142,14 @@
         "requires_server": false,
         "requires_meeting": true
       },
-      "deadline_plan": {
-        "deadline": "2026-02-07",
-        "phases": [
-          "alignment",
-          "content_draft",
-          "iteration",
-          "submission"
-        ],
-        "current_phase": "alignment",
-        "phase_rationale": "首次 funding 申请，内容尚未与导师对齐。"
-      },
-      "notes": "战略重要，情绪敏感。"
+      "notes": "战略重要且情绪敏感。"
     },
     {
       "id": "paper_TwinsUK_moco",
-      "name": "TwinsUK motion correction manuscript",
       "category": "research",
       "status": "blocked",
       "ai_summary": {
-        "current_state": "摘要已投，但文章方向与分析方案未定。",
+        "current_state": "摘要已投，但文章方向与分析方案尚未确定。",
         "what_is_done": [
           "完成摘要投稿"
         ],
@@ -233,28 +196,51 @@
       "notes": "方向与质量不确定。"
     },
     {
+      "id": "paper_neonate_moco",
+      "category": "research",
+      "status": "active",
+      "ai_summary": {
+        "current_state": "已有摘要结果，但是否尝试新重建方法尚未决定，存在速度与提升幅度的权衡。",
+        "what_is_done": [
+          "完成摘要投稿"
+        ],
+        "what_is_pending": [
+          "评估是否尝试新的重建方法",
+          "决定写作路径"
+        ],
+        "main_blockers": [
+          {
+            "type": "technical_uncertainty",
+            "description": "新方法是否可行及其收益不确定",
+            "dependency": "server / 方法实现"
+          }
+        ]
+      },
+      "progress_markers": {},
+      "required_triggers": [],
+      "unblocking_suggestions": [],
+      "work_mode_tags": {
+        "primary_mode": "remote",
+        "requires_server": true,
+        "requires_meeting": false
+      },
+      "notes": "探索性取舍项目。"
+    },
+    {
       "id": "idea_denosing_reconstruction",
-      "name": "General denoising reconstruction idea",
       "category": "research",
       "status": "exploratory",
       "ai_summary": {
-        "current_state": "已有理论想法，但实现与验证方式尚不清晰。",
+        "current_state": "已有理论想法，但实现与验证路径尚不清晰。",
         "what_is_done": [
           "形成理论思路"
         ],
         "what_is_pending": [
-          "探索可行的 network training 验证方案"
+          "探索 network training 的验证方案"
         ],
         "main_blockers": []
       },
-      "progress_markers": {
-        "completed_recently": [
-          "明确核心 idea"
-        ],
-        "pending_next": [
-          "探索实现路径"
-        ]
-      },
+      "progress_markers": {},
       "required_triggers": [],
       "unblocking_suggestions": [],
       "work_mode_tags": {
@@ -263,6 +249,89 @@
         "requires_meeting": false
       },
       "notes": "高潜力、高不确定性探索项目。"
+    },
+    {
+      "id": "student_project_dental",
+      "category": "education",
+      "status": "active",
+      "ai_summary": {
+        "current_state": "硕士学生项目进行中，涉及 phantom 制作与初步扫描，本人承担工作偏多。",
+        "what_is_done": [],
+        "what_is_pending": [
+          "完成 phantom 组件打印与组装",
+          "进行初步 MRI 扫描"
+        ],
+        "main_blockers": [
+          {
+            "type": "time_allocation",
+            "description": "学生投入时间有限，导师负担偏重",
+            "dependency": "student availability"
+          }
+        ]
+      },
+      "progress_markers": {},
+      "required_triggers": [],
+      "unblocking_suggestions": [],
+      "work_mode_tags": {
+        "primary_mode": "hybrid",
+        "requires_server": false,
+        "requires_meeting": true
+      },
+      "notes": "需控制投入，避免过度消耗。"
+    },
+    {
+      "id": "job_hunting",
+      "category": "job_hunting",
+      "status": "active",
+      "ai_summary": {
+        "current_state": "正在多路径求职与比较，已有若干 offer 与面试机会。",
+        "what_is_done": [
+          "获得部分 offer",
+          "安排或完成部分面试"
+        ],
+        "what_is_pending": [
+          "继续沟通与比较平台",
+          "进行后续面试与交流"
+        ],
+        "main_blockers": [
+          {
+            "type": "emotional",
+            "description": "社交与决策压力导致拖延",
+            "dependency": "self"
+          }
+        ]
+      },
+      "progress_markers": {},
+      "required_triggers": [],
+      "unblocking_suggestions": [],
+      "work_mode_tags": {
+        "primary_mode": "remote",
+        "requires_server": false,
+        "requires_meeting": true
+      },
+      "notes": "情绪负荷较高，需循序推进。"
+    },
+    {
+      "id": "engagement",
+      "category": "life",
+      "status": "active",
+      "ai_summary": {
+        "current_state": "订婚筹备正在推进，部分事项需本人参与关键决策。",
+        "what_is_done": [],
+        "what_is_pending": [
+          "完成剩余关键决策"
+        ],
+        "main_blockers": []
+      },
+      "progress_markers": {},
+      "required_triggers": [],
+      "unblocking_suggestions": [],
+      "work_mode_tags": {
+        "primary_mode": "personal",
+        "requires_server": false,
+        "requires_meeting": true
+      },
+      "notes": "情绪性项目，应避免与其他高负荷决策叠加。"
     }
   ]
 }
