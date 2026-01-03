@@ -1,0 +1,14 @@
+{
+  "todos": [
+    {
+      "project_id": "paper_becky_main",
+      "task": "Prepare structure summary",
+      "checked": true
+    },
+    {
+      "project_id": "paper_dental_moco",
+      "task": "Background masking",
+      "checked": false
+    }
+  ]
+}
