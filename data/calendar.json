@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "source": "manual",
+    "timezone": "Europe/London",
+    "week": "2026-01-05_to_2026-01-11"
+  },
+  "events": [
+    {
+      "title": "Zihan Ning Catch-up with Jo",
+      "start": "2026-01-05T14:00",
+      "end": "2026-01-05T15:00",
+      "flexibility": "fixed",
+      "priority": "high"
+    },
+    {
+      "title": "Neonatal UHF meeting",
+      "start": "2026-01-05T12:00",
+      "end": "2026-01-05T13:00",
+      "flexibility": "fixed",
+      "priority": "low"
+    },
+    {
+      "title": "CBD seminar",
+      "start": "2026-01-06T12:00",
+      "end": "2026-01-06T13:00",
+      "flexibility": "fixed",
+      "priority": "verylow"
+    },
+    {
+      "title": "Weekly Physics Meeting",
+      "start": "2026-01-07T10:00",
+      "end": "2026-01-07T12:00",
+      "flexibility": "fixed",
+      "priority": "medium"
+    }
+  ]
+}

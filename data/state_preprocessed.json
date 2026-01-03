@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "version": "status_ai_processed_v0.3",
+    "source": "state.json",
+    "timezone": "Europe/London",
+    "generated_date": "2026-01-04"
+  },
+  "projects": [
+    {
+      "id": "paper_becky_main",
+      "name": "Becky main manuscript",
+      "category": "research",
+      "status": "waiting_for_discussion",
+      "ai_summary": {
+        "current_state": "文章整体架构已经完成，但方向与结构仍需与 Jo 对齐确认。后续 results、discussion 及多方数据协调均依赖此次讨论。",
+        "what_is_done": [
+          "完成文章大致结构"
+        ],
+        "what_is_pending": [
+          "与 Jo 确认文章整体方向和结构",
+          "起草 results 和 discussion",
+          "联系相关同事获取数据"
+        ],
+        "main_blockers": [
+          {
+            "type": "coordination",
+            "description": "文章方向和结构需与 Jo 对齐后才能推进",
+            "dependency": "Jo"
+          }
+        ]
+      },
+      "progress_markers": {
+        "completed_recently": [
+          "完成文章结构初稿"
+        ],
+        "pending_next": [
+          "方向与结构确认",
+          "启动数据协调"
+        ]
+      },
+      "required_triggers": [
+        {
+          "type": "meeting_request",
+          "description": "请求与 Jo 讨论并确认文章整体结构",
+          "target": "Jo",
+          "confidence": "high"
+        }
+      ],
+      "unblocking_suggestions": [
+        {
+          "suggestion": "整理 1 页文章结构要点并提前发送给 Jo",
+          "rationale": "降低会议不确定性，提高对齐效率",
+          "risk": "low"
+        }
+      ],
+      "work_mode_tags": {
+        "primary_mode": "remote",
+        "requires_server": false,
+        "requires_meeting": true
+      },
+      "deadline_plan": {
+        "deadline": null,
+        "phases": [
+          "alignment",
+          "content_draft",
+          "iteration",
+          "submission"
+        ],
+        "current_phase": "alignment",
+        "phase_rationale": "文章结构与方向尚未与导师确认，后续内容强依赖此次对齐。"
+      },
+      "notes": "高个人重要性，强依赖跨人员协调。"
+    },
+    {
+      "id": "paper_dental_moco",
+      "name": "Dental MRI motion correction manuscript",
+      "category": "research",
+      "status": "active",
+      "ai_summary": {
+        "current_state": "数据已整理完成，可独立推进技术实现与文章撰写。",
+        "what_is_done": [
+          "完成数据采集与整理",
+          "已有文章框架"
+        ],
+        "what_is_pending": [
+          "自动背景 masking",
+          "自动 landmarking",
+          "批处理数据",
+          "撰写正文"
+        ],
+        "main_blockers": []
+      },
+      "progress_markers": {
+        "completed_recently": [
+          "完成数据整理"
+        ],
+        "pending_next": [
+          "补全关键技术模块"
+        ]
+      },
+      "required_triggers": [],
+      "unblocking_suggestions": [],
+      "work_mode_tags": {
+        "primary_mode": "remote",
+        "requires_server": true,
+        "requires_meeting": false
+      },
+      "deadline_plan": {
+        "deadline": null,
+        "phases": [
+          "content_draft",
+          "iteration",
+          "submission"
+        ],
+        "current_phase": "content_draft",
+        "phase_rationale": "方向明确，正在补全核心技术与文章内容。"
+      },
+      "notes": "技术负荷较高，部分模块存在实现不确定性。"
+    },
+    {
+      "id": "dental_MRI_funding",
+      "name": "Dental MRI funding application",
+      "category": "research",
+      "status": "waiting_for_discussion",
+      "ai_summary": {
+        "current_state": "初始申请内容已完成草稿，但需与 Jo 确认后修改。",
+        "what_is_done": [
+          "完成初始申请草稿"
+        ],
+        "what_is_pending": [
+          "与 Jo 确认内容",
+          "根据反馈修改并提交"
+        ],
+        "main_blockers": [
+          {
+            "type": "person",
+            "description": "申请内容需导师确认",
+            "dependency": "Jo"
+          }
+        ]
+      },
+      "progress_markers": {
+        "completed_recently": [
+          "完成初稿"
+        ],
+        "pending_next": [
+          "内容对齐与修改"
+        ]
+      },
+      "required_triggers": [
+        {
+          "type": "meeting_request",
+          "description": "请求与 Jo 讨论 funding 初始申请内容",
+          "target": "Jo",
+          "confidence": "high"
+        }
+      ],
+      "unblocking_suggestions": [
+        {
+          "suggestion": "标注 2–3 个最不确定的部分供 Jo 重点反馈",
+          "rationale": "减少修改轮次",
+          "risk": "low"
+        }
+      ],
+      "work_mode_tags": {
+        "primary_mode": "remote",
+        "requires_server": false,
+        "requires_meeting": true
+      },
+      "deadline_plan": {
+        "deadline": "2026-02-07",
+        "phases": [
+          "alignment",
+          "content_draft",
+          "iteration",
+          "submission"
+        ],
+        "current_phase": "alignment",
+        "phase_rationale": "首次 funding 申请，内容尚未与导师对齐。"
+      },
+      "notes": "战略重要，情绪敏感。"
+    },
+    {
+      "id": "paper_TwinsUK_moco",
+      "name": "TwinsUK motion correction manuscript",
+      "category": "research",
+      "status": "blocked",
+      "ai_summary": {
+        "current_state": "摘要已投，但文章方向与分析方案未定。",
+        "what_is_done": [
+          "完成摘要投稿"
+        ],
+        "what_is_pending": [
+          "多方讨论文章方向",
+          "确定分析方案"
+        ],
+        "main_blockers": [
+          {
+            "type": "coordination",
+            "description": "需多位合作者对齐方向",
+            "dependency": "Claire / Liane / Jo"
+          }
+        ]
+      },
+      "progress_markers": {
+        "completed_recently": [
+          "完成摘要"
+        ],
+        "pending_next": [
+          "方向性讨论"
+        ]
+      },
+      "required_triggers": [
+        {
+          "type": "email",
+          "description": "联系合作者安排讨论",
+          "target": "Claire / Liane / Jo",
+          "confidence": "medium"
+        }
+      ],
+      "unblocking_suggestions": [
+        {
+          "suggestion": "先与其中一位合作者进行 1:1 初步讨论",
+          "rationale": "降低协调复杂度",
+          "risk": "medium"
+        }
+      ],
+      "work_mode_tags": {
+        "primary_mode": "remote",
+        "requires_server": false,
+        "requires_meeting": true
+      },
+      "notes": "方向与质量不确定。"
+    },
+    {
+      "id": "idea_denosing_reconstruction",
+      "name": "General denoising reconstruction idea",
+      "category": "research",
+      "status": "exploratory",
+      "ai_summary": {
+        "current_state": "已有理论想法，但实现与验证方式尚不清晰。",
+        "what_is_done": [
+          "形成理论思路"
+        ],
+        "what_is_pending": [
+          "探索可行的 network training 验证方案"
+        ],
+        "main_blockers": []
+      },
+      "progress_markers": {
+        "completed_recently": [
+          "明确核心 idea"
+        ],
+        "pending_next": [
+          "探索实现路径"
+        ]
+      },
+      "required_triggers": [],
+      "unblocking_suggestions": [],
+      "work_mode_tags": {
+        "primary_mode": "remote",
+        "requires_server": false,
+        "requires_meeting": false
+      },
+      "notes": "高潜力、高不确定性探索项目。"
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "version": "0.2",
+    "owner": "Zihan",
+    "timezone": "Europe/London",
+    "last_updated": "2026-01-04",
+    "notes": "Narrative inputs are intentionally kept informal and free-form. Calendar constraints are handled in calendar.json."
+  },
+
+  "user_profile": {
+    "working_hours_per_week": 45,
+    "preferred_deepwork_time": ["10:30-12:30", "14:00-17:30", "21:00-22:30"],
+    "energy_pattern": {
+      "morning": "medium",
+      "afternoon": "high",
+      "evening": "low"
+    },
+    "health_constraints": {
+      "sleep_protected": true,
+      "max_late_nights_per_week": 1,
+      "exercise": "3 times per week at 20:30"
+    },
+    "notes": "Post-holiday restart period; avoid cognitive overload and decision fatigue."
+  },
+
+  "projects": [
+    {
+      "id": "paper_becky_main",
+      "narrative_input": {
+        "project_description": {
+          "style": "free_form_slash",
+          "content": "Becky的大文章/我是共同一作/这是我最近有可能发的最大的文章/我很看重。"
+        },
+        "current_status_and_next_steps": {
+          "style": "free_form_slash",
+          "content": "我这一周已经写好了文章的大致架构/希望下周可以和Jo讨论确定这个架构/并且还有results和discussion的内容/确定后我需要起草这些内容/并且还需要联系其他相关同事/他们会帮忙提供相关数据。"
+        },
+        "other_comments": {
+          "style": "free_form_slash",
+          "content": "我希望这篇文章可以尽快投出去/让我做别的事情。"
+        },
+        "difficulties": {
+          "style": "free_form_slash",
+          "content": "这类型的文章我没写过/而且需要与多个部门联动/导致进度经常被耽搁/我需要持续push/必要的时候约和同事们面谈/文章内容多且繁杂/需要反复打磨。"
+        }
+      },
+      "user_confirmed": {
+        "name": "Becky main manuscript",
+        "category": "research",
+        "deadline_policy": "asap"
+      },
+      "status": "active",
+      "status_reason": "waiting_for_discussion",
+      "dependency_hints": {
+        "requires_discussion_with": ["Jo"],
+        "likely_triggers": ["meeting_request"]
+      },
+      "notes": "High personal importance; coordination-heavy."
+    },
+
+    {
+      "id": "paper_dental_moco",
+      "narrative_input": {
+        "project_description": {
+          "style": "free_form_slash",
+          "content": "我想要投一篇一作文章/目标杂志radiology technical note/内容较为新颖所以感觉能投稍微高一点的杂志/我期望比较高"
+        },
+        "current_status_and_next_steps": {
+          "style": "free_form_slash",
+          "content": "我的数据已经收集完并且整理好/我需要完成一些重建和后处理components的 missing part/主要有两个/一个是重建时自动mask掉背景/一个是自动landmarking/pipeline确定后我需要批处理所有数据/需要找server空闲的时间-周五-周一是最好的时段/于此同时我可以开始写文章/文章已经有框架了"
+        },
+        "other_comments": {
+          "style": "free_form_slash",
+          "content": "我希望这篇文章可以尽快投出去/让我做别的事情。"
+        },
+        "difficulties": {
+          "style": "free_form_slash",
+          "content": "重建时自动mask掉背景和自动landmarking的实现可能需要network training/这方面我没有相关经验/可能需要时间调试"
+        }
+      },
+      "user_confirmed": {
+        "category": "research",
+        "deadline_policy": "asap"
+      },
+      "status": "active",
+      "status_reason": "self_driven",
+      "dependency_hints": {
+        "requires_server": true,
+        "best_server_window": "Friday_to_Monday"
+      },
+      "notes": "Technically heavy; avoid over-expansion in one week."
+    },
+
+    {
+      "id": "dental_MRI_funding",
+      "narrative_input": {
+        "project_description": {
+          "style": "free_form_slash",
+          "content": "我第一次申请funding/如果我今年9月之后我国内找工作不理想打算留在英国/我需要这份经费来支持我的一部分工资"
+        },
+        "current_status_and_next_steps": {
+          "style": "free_form_slash",
+          "content": "我根据Jo给的模板已经写好了初始的内容/2.7号是初始项目内容投递的ddl/初始申请如果通过/我需要提交whole proposal/现在我需要和Jo确定初始内容/并修改"
+        },
+        "other_comments": {
+          "style": "free_form_slash",
+          "content": "这是我第一次申请funding/我是co-PI"
+        },
+        "difficulties": {
+          "style": "free_form_slash",
+          "content": "第一次申请funding/没太多经验/可能需要和Jo多沟通"
+        }
+      },
+      "user_confirmed": {
+        "category": "research",
+        "deadline": "2026-02-07"
+      },
+      "status": "active",
+      "status_reason": "waiting_for_discussion",
+      "dependency_hints": {
+        "requires_discussion_with": ["Jo"],
+        "likely_triggers": ["meeting_request"]
+      },
+      "notes": "Strategically important and emotionally sensitive."
+    },
+
+    {
+      "id": "paper_TwinsUK_moco",
+      "narrative_input": {
+        "project_description": {
+          "style": "free_form_slash",
+          "content": "一篇我为一作/有关TwinsUK上Motion correction对数据造成结果的文章/我想目标杂志是neuroimaging或者brain/但是由于文章内容和结果还没有确定/不太知道质量如何"
+        },
+        "current_status_and_next_steps": {
+          "style": "free_form_slash",
+          "content": "相关的摘要内容已经投出/但是需要添加很多内容/目前需要约Claire Liane和Jo来讨论/但是2025年底没有约成功/讨论结束后需要根据讨论内容组织文章架构 整理数据 并做统计"
+        },
+        "other_comments": {
+          "style": "free_form_slash",
+          "content": "这是一篇我没写过的文章/我希望可以尽快投出去/让我做别的事情。"
+        },
+        "difficulties": {
+          "style": "free_form_slash",
+          "content": "这个文章类型没有写过/文章内容没有确定/需要讨论"
+        }
+      },
+      "user_confirmed": {
+        "category": "research",
+        "deadline_policy": "asap"
+      },
+      "status": "active",
+      "status_reason": "blocked",
+      "dependency_hints": {
+        "requires_discussion_with": ["Claire", "Liane", "Jo"],
+        "likely_triggers": ["email", "meeting_request"]
+      },
+      "notes": "Blocked mainly due to missing multi-person alignment."
+    },
+
+    {
+      "id": "paper_neonate_moco",
+      "narrative_input": {
+        "project_description": {
+          "style": "free_form_slash",
+          "content": "一篇我为一作/有关7T上新生儿运动矫正的文章/比较技术属性但没有技术创新/比较倾向于技术应用类型/可能不会投到很高的杂志/MRM或JMRI"
+        },
+        "current_status_and_next_steps": {
+          "style": "free_form_slash",
+          "content": "目前已有一个结果投了摘要/但是还想再试一个重建方法看看有没有提升/但是这个新的方法不一定能跑通且需要一定时间调试/目前这个项目的server也出了一点问题/理想情况是试了新的重建方法后再写文章/或者投入精力小追求速度直接按照摘要撰写文章"
+        },
+        "other_comments": {
+          "style": "free_form_slash",
+          "content": "我希望可以尽快投出去/让我做别的事情。"
+        },
+        "difficulties": {
+          "style": "free_form_slash",
+          "content": "即便新的重建跑出来/可能也不能发很高质量的文章/但是弃之可惜"
+        }
+      },
+      "user_confirmed": {
+        "category": "research"
+      },
+      "status": "active",
+      "status_reason": "exploratory",
+      "dependency_hints": {
+        "requires_server": true
+      },
+      "notes": "Exploratory trade-off between speed and marginal improvement."
+    },
+
+    {
+      "id": "idea_denosing_reconstruction",
+      "narrative_input": {
+        "project_description": {
+          "style": "free_form_slash",
+          "content": "这是一个很通用的idea/如果做出来了可以应用到很多地方/而且实现方式比较smart/有潜力可以发表MIA或者IEEE TMI这类的技术杂志/也能帮助我跨越到AI相关领域"
+        },
+        "current_status_and_next_steps": {
+          "style": "free_form_slash",
+          "content": "目前有了一个磁共振的理论思路/但是还需要落实怎么训练network去验证这个想法/不一定能成功"
+        },
+        "other_comments": {
+          "style": "free_form_slash",
+          "content": "我希望能在9月之前尽量实现这个技术"
+        },
+        "difficulties": {
+          "style": "free_form_slash",
+          "content": "我没有network training的经验/而且不知道这个idea能不能成功"
+        }
+      },
+      "user_confirmed": {
+        "category": "research"
+      },
+      "status": "active",
+      "status_reason": "exploratory",
+      "notes": "High uncertainty; should be protected as low-pressure exploration."
+    },
+
+    {
+      "id": "student_project_dental",
+      "narrative_input": {
+        "project_description": {
+          "style": "free_form_slash",
+          "content": "我在辅导一个硕士的学生项目/有关dental MRI phantom making/这个项目今年3月结束"
+        },
+        "current_status_and_next_steps": {
+          "style": "free_form_slash",
+          "content": "目前我们正在3D打印phantom的components/打印之后需要组建phantom/并且做一些初步的MRI scan"
+        },
+        "other_comments": {
+          "style": "free_form_slash",
+          "content": "我希望能不让这个项目耽误我太多时间/我不太能从中得到显性的利益/但是我也不想坑这个学生"
+        },
+        "difficulties": {
+          "style": "free_form_slash",
+          "content": "学生每周负责项目的时间有限/我目前承担了太多项目内容-比如3D打印和项目经费报销都是我在搞/我不满意这种情况"
+        }
+      },
+      "user_confirmed": {
+        "category": "education",
+        "deadline": "2026-03-15"
+      },
+      "status": "active",
+      "status_reason": "time_draining",
+      "notes": "Needs scope control and minimum-maintenance mode."
+    },
+
+    {
+      "id": "job_hunting",
+      "narrative_input": {
+        "project_description": {
+          "style": "free_form_slash",
+          "content": "我目前在找工作/当前合同只到2026-09-10/包括合同结束后我的英国签证也会到期/我想如果能找到理想的回国工作就回国/但我也考虑在英国再留一年给自己缓冲"
+        },
+        "current_status_and_next_steps": {
+          "style": "free_form_slash",
+          "content": "目前已有北京友谊医院院士实验室offer/联影offer/复旦要求依托平台申请成功海优才能入职/上交是1-8日线上面试/上科大是1月中旬面试/我需要多接触更多平台/也需要和多方交流沟通"
+        },
+        "other_comments": {
+          "style": "free_form_slash",
+          "content": "我希望能多沟通多比较"
+        },
+        "difficulties": {
+          "style": "free_form_slash",
+          "content": "我社交有困难/总是拖延/目前拿到的offer都不满意/我还感觉需要多和人聊才能了解更加清楚状况"
+        }
+      },
+      "user_confirmed": {
+        "category": "job_hunting",
+        "deadline_policy": "asap"
+      },
+      "status": "active",
+      "status_reason": "decision_heavy",
+      "dependency_hints": {
+        "likely_triggers": ["email", "informational_chat"]
+      },
+      "notes": "High cognitive and emotional load."
+    },
+
+    {
+      "id": "engagement",
+      "narrative_input": {
+        "project_description": {
+          "style": "free_form_slash",
+          "content": "2026-1-31 到2026-2-23我请年假回国订婚/订婚时间是2-2到2-7日"
+        },
+        "current_status_and_next_steps": {
+          "style": "free_form_slash",
+          "content": "目前订婚布置方案正在推进中/我的父母能帮我执行/但是他们不太能帮太多决定层面的忙/我还是需要花精力在这个上面"
+        },
+        "other_comments": {
+          "style": "free_form_slash",
+          "content": "希望能搞好布置/也协调好多方宾客"
+        },
+        "difficulties": {
+          "style": "free_form_slash",
+          "content": "我有点觉得这个事情很麻烦/有点躲避/也讨厌和多方沟通/但是如果到时候结果不好/我会非常失望"
+        }
+      },
+      "user_confirmed": {
+        "category": "life",
+        "deadline": "2026-02-02"
+      },
+      "status": "active",
+      "status_reason": "emotionally_heavy",
+      "notes": "Time-bounded but emotionally sensitive."
+    }
+  ]
+}
